@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="50dp"
+        android:height="75dp"
+        android:viewportHeight="400"
+        android:viewportWidth="300">
+
+    <path
+        android:name="path_to_morph"
+        android:pathData="@string/two_path"
+        android:strokeColor="#ffffff"
+        android:strokeLineCap="square"
+        android:strokeWidth="60"/>
+</vector>

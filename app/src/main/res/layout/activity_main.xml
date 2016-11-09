@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_megapolis"
+    tools:context="com.kamenov.morphtimer.MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.kamenov.android.morpher.Morpher
+                android:id="@+id/morpher_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:duration="350"
+                app:strokeWidth="50"
+                app:textColor="@android:color/white"
+                app:zeroFiller="2"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:alpha=".8"
+                    android:background="@drawable/circle"/>
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:alpha=".8"
+                    android:background="@drawable/circle"/>
+            </FrameLayout>
+
+            <com.kamenov.android.morpher.Morpher
+                android:id="@+id/morpher_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:duration="350"
+                app:strokeWidth="35"
+                app:textColor="@android:color/white"
+                app:zeroFiller="2"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:alpha=".8"
+                    android:background="@drawable/circle"/>
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:alpha=".8"
+                    android:background="@drawable/circle"/>
+            </FrameLayout>
+
+            <com.kamenov.android.morpher.Morpher
+                android:id="@+id/morpher_seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:duration="350"
+                app:strokeWidth="15"
+                app:textColor="@android:color/white"
+                app:zeroFiller="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:ems="4"
+                        android:inputType="number"/>
+
+                    <Button
+                        android:id="@+id/btn_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_input_zeroes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:ems="4"
+                        android:inputType="number"/>
+
+                    <Button
+                        android:id="@+id/btn_set_zeroes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zeroes"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.kamenov.android.morpher.Morpher
+                android:id="@+id/morpher_input"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:duration="350"
+                app:strokeWidth="15"
+                app:textColor="@android:color/white"
+                app:zeroFiller="2"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
