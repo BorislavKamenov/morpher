@@ -1,2 +1,2 @@
-# morpher
-Android library for animated transition of numbers using animated vector drawables and morphing.
+# Morpher
+Android library for animated transition between numbers using animated vector drawables and morphing.
