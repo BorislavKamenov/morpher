@@ -1,6 +1,8 @@
 ## Morpher
 Android library for animated transition between numbers using animated vector drawables and morphing.
 
+**Supports only APIs >= 21 Lollipop**
+
 ![](http://i.giphy.com/3oriNOmApXPb3x6oVi.gif)
 
 ## How to use
