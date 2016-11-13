@@ -13,7 +13,7 @@ import java.util.List;
 public class Morpher extends LinearLayout {
 
     static final int DEFAULT_ZEROES = 1;
-    static final int DEFAULT_DURATION = 350;
+    static final int DEFAULT_DURATION = 550;
     static final int DEFAULT_COLOR = Color.BLACK;
     static final int DEFAULT_STROKE_WIDTH = 20;
 

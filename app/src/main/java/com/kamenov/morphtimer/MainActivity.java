@@ -3,6 +3,7 @@ package com.kamenov.morphtimer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
     private Morpher morpherInput;
 
     private Calendar mCalendar;
-
+    static
+    {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
