@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-
-project.afterEvaluate {
-    task bintrayUpload(group: "publishing", overwrite: true) {
-        dependsOn subprojects.bintrayUpload
-    }
-}
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
+//
+//project.afterEvaluate {
+//    task bintrayUpload(group: "publishing", overwrite: true) {
+//        dependsOn subprojects.bintrayUpload
+//    }
+//}
 
 ext {
     bintrayRepo = 'maven'
