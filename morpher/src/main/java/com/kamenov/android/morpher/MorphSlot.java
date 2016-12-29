@@ -6,7 +6,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.VectorDrawable;
-import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -128,13 +128,16 @@ public class MorphSlot extends ImageView {
             mVectorDrawableStateField.setAccessible(true);
             Object mVectorStateObj = mVectorDrawableStateField.get(vectorDrawableObj);
 
-            Field mVPathRendererField = mVectorStateObj.getClass().getDeclaredField("mVPathRenderer");
-            mVPathRendererField.setAccessible(true);
-            Object mVPathRendererObj = mVPathRendererField.get(mVectorStateObj);
+            Object objectToUse = mVectorStateObj;
+            if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
+                Field mVPathRendererField = mVectorStateObj.getClass().getDeclaredField("mVPathRenderer");
+                mVPathRendererField.setAccessible(true);
+                objectToUse = mVPathRendererField.get(mVectorStateObj);
+            }
 
-            Field mRootGroupField = mVPathRendererObj.getClass().getDeclaredField("mRootGroup");
+            Field mRootGroupField = objectToUse.getClass().getDeclaredField("mRootGroup");
             mRootGroupField.setAccessible(true);
-            Object mVGroup = mRootGroupField.get(mVPathRendererObj);
+            Object mVGroup = mRootGroupField.get(objectToUse);
 
             Field mChildrenField = mVGroup.getClass().getDeclaredField("mChildren");
             mChildrenField.setAccessible(true);
