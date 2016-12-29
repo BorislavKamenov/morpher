@@ -10,7 +10,7 @@ Add Gradle dependency:
 
 ```gradle
 dependencies {
-   compile 'com.kamenov.morpher:morpher:1.0.0'
+   compile 'com.kamenov.morpher:morpher:1.0.2'
 }
 ```
 
